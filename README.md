@@ -19,8 +19,7 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ## 📦 Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) <br>
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) <br>
+<img src="https://skillicons.dev/icons?i=python,django" height="40"/> 
 ![DRF](https://img.shields.io/badge/Django%20REST-ff1709?style=for-the-badge&logo=django&logoColor=white)
 
 ---
@@ -56,7 +55,8 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 - 📍 Location: India
 - 📧 Email: sajjadali.dev01@gmail.com
-- 🔗 GitHub: https://github.com/sajjadali-fullstack
+- <img src="https://skillicons.dev/icons?i=github" height="40"/>
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sajjadali-fullstack/)
 
 ---
 
