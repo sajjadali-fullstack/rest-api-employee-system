@@ -1,0 +1,13 @@
+
+
+# Django migrations (optional if you don't want to track)
+# */migrations/*.py
+# */migrations/*.pyc
+__pycache__/
+
+# pytest
+.pytest_cache/
+
+
+# IMP FILE
+documentation.txt
