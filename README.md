@@ -50,6 +50,17 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
+## 👨‍💻 Author
+
+**Sajjad Ali**
+
+- 📍 Location: India
+- 📧 Email: sajjadali.dev01@gmail.com
+- 🔗 GitHub: https://github.com/sajjadali-fullstack
+
+---
+
+
 ## 🔧 Setup Instructions
 
 ```bash
