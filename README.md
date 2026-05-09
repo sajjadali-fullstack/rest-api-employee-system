@@ -19,7 +19,7 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ## 📦 Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,django" height="40"/> 
+<img src="https://skillicons.dev/icons?i=python,django" height="40"/> <br>
 ![DRF](https://img.shields.io/badge/Django%20REST-ff1709?style=for-the-badge&logo=django&logoColor=white)
 
 ---
