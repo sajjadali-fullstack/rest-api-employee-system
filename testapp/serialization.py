@@ -1,5 +1,13 @@
 from rest_framework import serializers
 
+from rest_framework.renderers import JSONRenderer
+# JSONRenderer().render()
+import io
+# rest_framework ===> parsers ===> JSONParser
+from rest_framework.parsers import JSONParser  # It will convert into Python Data(Dict)
+# io.BytesIO(jsonData)
+
+
 class EmployeeSerializer(serializers.Serializer):  # 
     emp_id = serializers.IntegerField() 
     first_name = serializers.CharField(max_length=100)
@@ -9,6 +17,5 @@ class EmployeeSerializer(serializers.Serializer):  #
     designation = serializers.CharField(max_length=99)  # Junior Developer
     salary = serializers.DecimalField(max_digits=12, decimal_places=2)
     joining_date = serializers.DateField()
-    emp_name = serializers.CharField(max_length=88)
-    emp_sal = serializers.FloatField()
-    emp_addr = serializers.CharField(max_lengt=400)
+    City = serializers.CharField(max_length=55)
+    Address = serializers.CharField(max_length=400)
