@@ -8,12 +8,13 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ## 🚀 Features
 
-- Employee data serialization using DRF
-- Model-based structure for database handling
-- Convert model instances to JSON
-- Handle dictionary to JSON responses
-- Basic employee fields management
-- Ready for CRUD operations extension
+- Employee CRUD API (Create, Read, Update, Delete)
+- Django REST Framework serializers
+- JSON-based API responses
+- Model-driven architecture
+- Class-Based Views (CBV)
+- Lightweight and extensible structure
+
 
 ---
 
@@ -22,6 +23,9 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 <img src="https://skillicons.dev/icons?i=python,django" height="40"/> <br>
 ![DRF](https://img.shields.io/badge/Django%20REST-ff1709?style=for-the-badge&logo=django&logoColor=white)
 
+- Django
+- Django REST Framework
+- Python
 ---
 
 ## 📊 Employee Fields
@@ -42,10 +46,11 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ## 🧠 Concepts Covered
 
-- Serializers in Django REST Framework
-- Model instance serialization
-- JSON response handling
-- API structure basics
+- Django Models
+- Django REST Framework Serializers
+- JSON Parsing & Rendering
+- Class-Based Views (CBV)
+- API Request Handling
 
 ---
 
