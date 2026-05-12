@@ -6,6 +6,16 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
+## 🧠 Concepts Covered
+
+ -Django Models
+ -Django REST Framework Serializers
+ -JSON Parsing & Rendering
+ -Class-Based Views (CBV)
+ -API Request Handling
+ -📥 GET Method (Retrieve data from API using requests.get())
+
+
 ## 🚀 Features
 
 - Employee CRUD API (Create, Read, Update, Delete)
