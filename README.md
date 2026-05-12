@@ -58,8 +58,9 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 **Sajjad Ali**
 
 - 📍 Location: India
-- 📧 Email: sajjadali.dev01@gmail.com
-- <img src="https://skillicons.dev/icons?i=github" height="40"/>
+-[![Email](https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=icloud&logoColor=white)](mailto:sajjadali.dev01@gmail.com)<img src="https://skillicons.dev/icons?i=github" height="40"/>
+-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sajjadali.dev01@gmail.com)
+-[![Email](https://img.shields.io/badge/Email-sajjadali.dev01%40gmail.com-blue?style=flat-square&logo=gmail)](mailto:sajjadali.dev01@gmail.com)
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sajjadali-fullstack/)
 
 ---
