@@ -6,16 +6,6 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
-## 🧠 Concepts Covered
-- Django Models  
-- Django REST Framework Serializers  
-- JSON Parsing & Rendering  
-- Class-Based Views (CBV)  
-- API Request Handling  
-- HTTP Methods:
-- GET (Retrieve data from API)
-
-
 ## 🚀 Features
 
 - Employee CRUD API (Create, Read, Update, Delete)
@@ -48,20 +38,19 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 - designation
 - salary
 - joining_date
-- emp_name
-- emp_sal
-- emp_addr
+- City
+- Address
 
 ---
 
 ## 🧠 Concepts Covered
-
-- Django Models
-- Django REST Framework Serializers
-- JSON Parsing & Rendering
-- Class-Based Views (CBV)
-- API Request Handling
-
+- Django Models  
+- Django REST Framework Serializers  
+- JSON Parsing & Rendering  
+- Class-Based Views (CBV)  
+- API Request Handling  
+- HTTP Methods:
+- GET (Retrieve data from API)
 ---
 
 ## 👨‍💻 Author
@@ -81,6 +70,9 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 ```bash
 # Clone repository
 git clone https://github.com/sajjadali-fullstack/rest-api-employee-system.git
+
+# Download
+pip install requests
 
 # Go to project directory
 cd withRest1
