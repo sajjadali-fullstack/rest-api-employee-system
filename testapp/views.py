@@ -7,6 +7,8 @@ from testapp.serialization import EmployeeSerializer
 from rest_framework.renderers import JSONRenderer
 from django.http import HttpResponse
 
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 # Create your business logic / views here 👇.
 
 
@@ -15,30 +17,52 @@ from django.http import HttpResponse
 # qurey set ===> python native dataType(serialization)
 #     python native data type ===> JSON data(JSONRenderer().render())
 
-class EmployeeCRUDCVB(View):
+# class EmployeeCRUDCVB(View):
     
-    def get(self, request, *args, **kwargs):        
-        # Data from the Body
-        json_data = request.body
-        # Convert into Stream
-        stream = io.BytesIO(json_data)
-        # JSON data to Python Data
-        pdata = JSONParser().parse(stream)
+#     def get(self, request, *args, **kwargs):        
+#         # Data from the Body
+#         json_data = request.body
+#         # Convert into Stream
+#         stream = io.BytesIO(json_data)
+#         # JSON data to Python Data
+#         pdata = JSONParser().parse(stream)
 
-        id = pdata.get('id', None)
+#         id = pdata.get('id', None)
         
-        if id is not None:
-            emp = Employee.objects.get(id=id)  # Comple Type
-            eserializer = EmployeeSerializer(emp)
-            # Convert into JSON data
-            json_data = JSONRenderer().render(eserializer.data)
+#         if id is not None:
+#             emp = Employee.objects.get(id=id)  # Comple Type
+#             eserializer = EmployeeSerializer(emp)
+#             # Convert into JSON data
+#             json_data = JSONRenderer().render(eserializer.data)
 
-            return HttpResponse(json_data, content_type='application/json', status=200)
-        # if not come than this 
-        qurey_set = Employee.objects.all()
-        eserializer = EmployeeSerializer(qurey_set, many=True)
-        json_data = JSONRenderer().render(eserializer.data)
-        return HttpResponse(json_data, content_type='application/json', status=200)
+#             return HttpResponse(json_data, content_type='application/json', status=200)
+#         # if not come than this 
+#         qurey_set = Employee.objects.all()
+#         eserializer = EmployeeSerializer(qurey_set, many=True)
+#         json_data = JSONRenderer().render(eserializer.data)
+#         return HttpResponse(json_data, content_type='application/json', status=200)
+
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class EmployeeCRUDCBV(View):
+    def post(self, request, *args, **kwargs):
+
+        json_data = request.body
+        stream = io.BytesIO(json_data)
+        pdata = JSONParser().parse(stream)
+        serializer = EmployeeSerializer(data=pdata)
+
+        if serializer.is_valid():
+            serializer.save()
+            msg = {'msg':'Resources created sucessfully '}
+            json_data = JSONRenderer().render(msg)
+            return HttpResponse(json_data, content_type='application/json')
+    
+        # print Error
+        json_data = JSONRenderer().render(serializer.errors)
+        return HttpResponse(json_data, content_type='appplication/json', status=400)
+
 
 
 
