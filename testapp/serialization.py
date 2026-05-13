@@ -7,6 +7,7 @@ import io
 from rest_framework.parsers import JSONParser  # It will convert into Python Data(Dict)
 # io.BytesIO(jsonData)
 
+from testapp.models import Employee
 
 class EmployeeSerializer(serializers.Serializer):  # 
     emp_id = serializers.IntegerField() 
@@ -19,3 +20,6 @@ class EmployeeSerializer(serializers.Serializer):  #
     joining_date = serializers.DateField()
     City = serializers.CharField(max_length=55)
     Address = serializers.CharField(max_length=400)
+
+    def create(self, validated_data):
+        return Employee.objects.create(**validated_data)
