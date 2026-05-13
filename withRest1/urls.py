@@ -21,5 +21,5 @@ from testapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
      path("api-auth/", include("rest_framework.urls")),
-     path("api/", views.EmployeeCRUDCVB.as_view(), name='employeeCRUD'),
+     path("api/", views.EmployeeCRUDCBV.as_view(), name='employeeCRUD'),
 ]
