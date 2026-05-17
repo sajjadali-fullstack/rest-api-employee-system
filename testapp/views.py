@@ -46,26 +46,42 @@ from django.views.decorators.csrf import csrf_exempt
 
 @method_decorator(csrf_exempt, name='dispatch')
 class EmployeeCRUDCBV(View):
-    def post(self, request, *args, **kwargs):
 
+    # def post(self, request, *args, **kwargs):
+
+    #     json_data = request.body
+    #     stream = io.BytesIO(json_data)
+    #     pdata = JSONParser().parse(stream)
+    #     serializer = EmployeeSerializer(data=pdata)
+
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         msg = {'msg':'Resources created sucessfully '}
+    #         json_data = JSONRenderer().render(msg)
+    #         return HttpResponse(json_data, content_type='application/json')
+    
+    #     # print Error
+    #     json_data = JSONRenderer().render(serializer.errors)
+    #     return HttpResponse(json_data, content_type='appplication/json', status=400)
+
+    def put(self, request, *args, **kwargs):
+        # Collect the data
         json_data = request.body
         stream = io.BytesIO(json_data)
-        pdata = JSONParser().parse(stream)
-        serializer = EmployeeSerializer(data=pdata)
+        pydata = JSONParser().parse(stream)
+        id = pydata.get('id')
+        emp = Employee.objects.get(id=id)
+        serializer = EmployeeSerializer(emp, data=pydata)
 
         if serializer.is_valid():
             serializer.save()
-            msg = {'msg':'Resources created sucessfully '}
+
+            msg = {'msg':'Resources updated sucessfully'}
             json_data = JSONRenderer().render(msg)
             return HttpResponse(json_data, content_type='application/json')
-    
-        # print Error
+
         json_data = JSONRenderer().render(serializer.errors)
-        return HttpResponse(json_data, content_type='appplication/json', status=400)
-
-
-
-
+        return HttpResponse(json_data, content_type='application/json', status=400)
 
 
 
