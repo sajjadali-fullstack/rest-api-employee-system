@@ -18,10 +18,20 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
-## 📦 Tech Stack
+## 🛠️ Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,django" height="40"/> <br>
-![DRF](https://img.shields.io/badge/Django%20REST-ff1709?style=for-the-badge&logo=django&logoColor=white)
+* **Backend:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="50"/>
+
+* **Database:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" width="50"/>
+  
+* **Tool:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg" width="50"/>
+
+---
 
 - Django
 - Django REST Framework
@@ -43,7 +53,7 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
-## 🧠 Concepts Covered
+## 🧠 Concepts I Learned
 - Django Models  
 - Django REST Framework Serializers  
 - JSON Parsing & Rendering  
@@ -51,14 +61,54 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 - API Request Handling  
 - HTTP Methods:
 - GET (Retrieve data from API)
+- GET → Retrieve employee data
+- POST → Create new employee
+- PUT → Update existing employee
+- DELETE → Remove employee record
+- Serializer Validation
+- Request & Response Handling
+- Working with JSON Data
+---
+
+## WIP 
+## 📌 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/employees/` | Get all employees |
+| GET | `/employees/id/` | Get single employee |
+| POST | `/employees/` | Create employee |
+| PUT | `/employees/id/` | Update employee |
+| DELETE | `/employees/id/` | Delete employee |
+
 ---
 
 ## 👨‍💻 Author
 
 **Sajjad Ali**
 
--[![Email](https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=icloud&logoColor=white)](mailto:sajjadali.dev01@gmail.com) <br>
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sajjadali-fullstack/)
+
+## 🤝 Connect with Me
+
+Agar aapke paas koi sawal hai ya aap connect karna chahte hain, toh aap mujhe niche diye gaye platforms par reach out kar sakte hain: <br>
+<i>If you have any questions or would like to connect, feel free to reach out to me on the platforms below:"</i>
+
+* **LinkedIn:**  
+  <a href="https://www.linkedin.com/in/sajjadali-fullstack/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="50" alt="LinkedIn"/>
+  </a>
+
+* **Gmail:**  
+  <a href="mailto:sajjadali.dev01@gmail.com">
+    <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Gmail-Light.svg" width="50" alt="Gmail"/>
+  </a>
+
+---
+
+## 💖 Support & Usage
+If you find this project helpful or plan to use it as a template for your learning, please consider:
+1. Giving it a **Star ⭐**
+2. Giving credit to the original author
 
 ---
 
