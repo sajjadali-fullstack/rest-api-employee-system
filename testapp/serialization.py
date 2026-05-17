@@ -21,5 +21,25 @@ class EmployeeSerializer(serializers.Serializer):  #
     City = serializers.CharField(max_length=55)
     Address = serializers.CharField(max_length=400)
 
-    def create(self, validated_data):
-        return Employee.objects.create(**validated_data)
+    # Create Data
+    # def create(self, validated_data):
+    #     return Employee.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.emp_id = validated_data.get('emp_id',instance.emp_id)
+        instance.first_name = validated_data.get('first_name',instance.first_name) 
+        instance.last_name = validated_data.get('last_name',instance.last_name)
+        instance.email = validated_data.get('email', instance.email)
+        instance.department = validated_data.get('department',instance.department)
+        instance.designation = validated_data.get('designation',instance.designation)
+        instance.salary = validated_data.get('salary',instance.salary)
+        instance.joining_date = validated_data.get('joining_date',instance.joining_date)
+        instance.City = validated_data.get('City',instance.City)
+        instance.Address = validated_data.get('Adress',instance.Address)
+
+        instance.save()
+        return instance
+
+
+
+        
