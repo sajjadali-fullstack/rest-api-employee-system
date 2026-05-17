@@ -18,10 +18,20 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
-## 📦 Tech Stack
+## 🛠️ Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,django" height="40"/> <br>
-![DRF](https://img.shields.io/badge/Django%20REST-ff1709?style=for-the-badge&logo=django&logoColor=white)
+* **Backend:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="50"/>
+
+* **Database:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" width="50"/>
+  
+* **Tool:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg" width="50"/>
+
+---
 
 - Django
 - Django REST Framework
@@ -77,20 +87,6 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 **Sajjad Ali**
 
-## 🛠️ Tech Stack
-
-* **Backend:**  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
-  &nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="50"/>
-
-* **Database:**  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" width="50"/>
-  
-* **Tool:**  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg" width="50"/>
-
----
 
 ## 🤝 Connect with Me
 
