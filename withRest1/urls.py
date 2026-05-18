@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
      path("api-auth/", include("rest_framework.urls")),
      path("api/", views.EmployeeCRUDCBV.as_view(), name='employeeCRUD'),
+     path("api-update/", views.EmployeeCRUDCBU.as_view(), name='employeeCRUD_update'),
+     path("api-partial-update/", views.EmployeeCRUDCBVPU.as_view(), name='employeeCRUD_partial_update'),
+     path("api-delete/", views.EmployeeCRUDCBVD.as_view(), name='employeeCRUD_DELETE'),
 ]

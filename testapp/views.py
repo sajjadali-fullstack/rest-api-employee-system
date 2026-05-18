@@ -47,28 +47,36 @@ from django.views.decorators.csrf import csrf_exempt
 @method_decorator(csrf_exempt, name='dispatch')
 class EmployeeCRUDCBV(View):
 
-    # def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
 
-    #     json_data = request.body
-    #     stream = io.BytesIO(json_data)
-    #     pdata = JSONParser().parse(stream)
-    #     serializer = EmployeeSerializer(data=pdata)
+        json_data = request.body
+        stream = io.BytesIO(json_data)
+        pdata = JSONParser().parse(stream)
+        serializer = EmployeeSerializer(data=pdata)
 
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         msg = {'msg':'Resources created sucessfully '}
-    #         json_data = JSONRenderer().render(msg)
-    #         return HttpResponse(json_data, content_type='application/json')
+        if serializer.is_valid():
+            serializer.save()
+            msg = {'msg':'Resources created sucessfully '}
+            json_data = JSONRenderer().render(msg)
+            return HttpResponse(json_data, content_type='application/json')
     
-    #     # print Error
-    #     json_data = JSONRenderer().render(serializer.errors)
-    #     return HttpResponse(json_data, content_type='appplication/json', status=400)
+        # print Error
+        json_data = JSONRenderer().render(serializer.errors)
+        return HttpResponse(json_data, content_type='appplication/json', status=400)
 
+
+#                           Update 
+
+@method_decorator(csrf_exempt, name='dispatch')
+class EmployeeCRUDCBU(View):
     def put(self, request, *args, **kwargs):
         # Collect the data
         json_data = request.body
+        # Convert into stream
         stream = io.BytesIO(json_data)
+        # Convert into pythonData
         pydata = JSONParser().parse(stream)
+
         id = pydata.get('id')
         emp = Employee.objects.get(id=id)
         serializer = EmployeeSerializer(emp, data=pydata)
@@ -82,6 +90,59 @@ class EmployeeCRUDCBV(View):
 
         json_data = JSONRenderer().render(serializer.errors)
         return HttpResponse(json_data, content_type='application/json', status=400)
+
+
+
+#                           PARTIAL UPDATE
+
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class EmployeeCRUDCBVPU(View):
+    
+    def put(self, request, *args, **kwargs):
+        # Collect the data
+        json_data = request.body
+        # Convert into stream
+        stream = io.BytesIO(json_data)
+        # Convert into pythonData
+        pydata = JSONParser().parse(stream)
+
+        id = pydata.get('id')
+        emp = Employee.objects.get(id=id)
+        serializer = EmployeeSerializer(emp, data=pydata, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+
+            msg = {'msg':'Resources Partially updated sucessfully'}
+            json_data = JSONRenderer().render(msg)
+            return HttpResponse(json_data, content_type='application/json')
+
+        json_data = JSONRenderer().render(serializer.errors)
+        return HttpResponse(json_data, content_type='application/json', status=400)
+
+
+#                           DELETE
+
+@method_decorator(csrf_exempt, name='dispatch')
+class  EmployeeCRUDCBVD(View):
+
+    def delete(self, request, *args, **kwargs):
+        # collect data
+        json_data = request.body
+        # convert into stream
+        stream = io.BytesIO(json_data)
+        # convert int python
+        pydata = JSONParser().parse(stream)
+
+        id = pydata.get('id')
+        emp = Employee.objects.get(id=id)
+        emp.delete()
+        msg = {'msg':'Resources Deleted sucessfully!'}
+        # convert into json
+        json_data = JSONRenderer().render(msg)
+        return HttpResponse(json_data, content_type='applicaton/json')
 
 
 
