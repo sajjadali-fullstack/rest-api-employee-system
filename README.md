@@ -14,6 +14,11 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 - Model-driven architecture
 - Class-Based Views (CBV)
 - Lightweight and extensible structure
+- Field Level Validation
+- Object Level Validation
+- Partial Update Support
+- Lightweight and extensible structure
+
 
 
 ---
@@ -53,36 +58,44 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 ---
 
-## 🧠 Concepts I Learned
-- Django Models  
-- Django REST Framework Serializers  
-- JSON Parsing & Rendering  
-- Class-Based Views (CBV)  
-- API Request Handling  
-- HTTP Methods:
-- GET (Retrieve data from API)
-- GET → Retrieve employee data
-- POST → Create new employee
-- PUT → Update existing employee
-- DELETE → Remove employee record
-- Serializer Validation
+# 🧠 Concepts I Learned
+
+## Django & DRF Basics
+
+- Django Models
+- Django REST Framework Serializers
+- JSON Parsing & Rendering
 - Request & Response Handling
 - Working with JSON Data
----
-
-## WIP 
-## 📌 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/employees/` | Get all employees |
-| GET | `/employees/id/` | Get single employee |
-| POST | `/employees/` | Create employee |
-| PUT | `/employees/id/` | Update employee |
-| DELETE | `/employees/id/` | Delete employee |
+- Class-Based Views (CBV)
 
 ---
 
+## HTTP Methods
+
+| Method | Description |
+|--------|-------------|
+| GET | Retrieve employee data |
+| POST | Create new employee |
+| PUT | Update existing employee |
+| DELETE | Remove employee record |
+
+---
+
+## 📚 What I Practiced
+
+- Serializer Validation
+- Field Level Validation
+- Object Level Validation
+- Partial Updates in DRF
+
+---
+
+## 📂 Project Purpose
+
+This project was built for learning and practicing Django REST Framework concepts with real-world API structure and validation handling.
+
+---
 ## 👨‍💻 Author
 
 **Sajjad Ali**
@@ -110,7 +123,7 @@ If you find this project helpful or plan to use it as a template for your learni
 1. Giving it a **Star ⭐**
 2. Giving credit to the original author
 
----
+
 
 
 ## 🔧 Setup Instructions
