@@ -32,9 +32,6 @@ It demonstrates how to work with serializers, models, and basic API structure fo
 
 * **Database:**  
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" width="50"/>
-  
-* **Tool:**  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg" width="50"/>
 
 ---
 
@@ -121,7 +118,7 @@ Agar aapke paas koi sawal hai ya aap connect karna chahte hain, toh aap mujhe ni
 ## 💖 Support & Usage
 If you find this project helpful or plan to use it as a template for your learning, please consider:
 1. Giving it a **Star ⭐**
-2. Giving credit to the original author
+2. Giving credit to the original author means me Your Sajju 🔥✨
 
 
 
