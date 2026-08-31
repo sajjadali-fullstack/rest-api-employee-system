@@ -25,6 +25,7 @@ class EmployeeSerializer(serializers.Serializer):  #
     # def create(self, validated_data):
     #     return Employee.objects.create(**validated_data)
 
+    # Update Data
     def update(self, instance, validated_data):
         instance.emp_id = validated_data.get('emp_id',instance.emp_id)
         instance.first_name = validated_data.get('first_name',instance.first_name) 
@@ -42,4 +43,20 @@ class EmployeeSerializer(serializers.Serializer):  #
 
 
 
+# Validate Data
+
+    # def validate_salary(self,value):
+    #     if value < 40000:
+    #         raise serializers.ValidationError("Employee Salary Should be 4000")
+    #     return value
+
+    
+# 2. Partial update for Object level  Validate with name     
+    def validate(self, data):
+        first_name = data.get('first_name') 
+        salary = data.get('salary')
         
+        if first_name.lower() == 'amir':
+            if salary < 90000:
+                raise serializers.ValidationError("Amir Salary should be 90K / more")
+        return data

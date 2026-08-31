@@ -55,7 +55,7 @@ class EmployeeCRUDCBV(View):
         serializer = EmployeeSerializer(data=pdata)
 
         if serializer.is_valid():
-            serializer.save()
+            serializer. save()
             msg = {'msg':'Resources created sucessfully '}
             json_data = JSONRenderer().render(msg)
             return HttpResponse(json_data, content_type='application/json')

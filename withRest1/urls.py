@@ -20,6 +20,7 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('', views.index, name='index'),
      path("api-auth/", include("rest_framework.urls")),
      path("api/", views.EmployeeCRUDCBV.as_view(), name='employeeCRUD'),
      path("api-update/", views.EmployeeCRUDCBU.as_view(), name='employeeCRUD_update'),

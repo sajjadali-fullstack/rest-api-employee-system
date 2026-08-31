@@ -21,26 +21,27 @@ END_POINT = 'api/'
 
 
 
-# CREATE RESOURCE
+# CREATE RESOURCE Make sure seriliztion.py def create is un comment
+
 def create_resource():
     new_emp = {
 
-        'emp_id':9,
-        'first_name':'Aleem',
-        'last_name':'Sayyed',
-        'email':'aleemcc@gmail.com' ,
-        'department':'Accountant',
-        'designation':'Jr. Accountant',
-        'salary':450000,
+        'emp_id':130,
+        'first_name':'liza',
+        'last_name':'Shaikh',
+        'email':'liza@gmail.com' ,
+        'department':'Actor',
+        'designation':'Superstar',
+        'salary':45000000,
         'joining_date':'2026-05-17',
-        'City':'Thane',
-        'Address':'Mumbra Kausa',
+        'City':'Goregaon',
+        'Address':'Bandra',
 
     }
     # conver to JSON
     resp = requests.post(BASE_URL + END_POINT, data=json.dumps(new_emp))
     print(resp.status_code)
-    print(resp.json)
+    print(resp.json())
 
 create_resource()
 
@@ -127,3 +128,39 @@ print()
 #     print(resp.json())
 
 # delete_resource(6)    
+
+
+#                                   1. Partial update for Validate
+
+# BASE_URL = 'http://127.0.0.1:8000/'
+# END_POINT = 'api-partial-update/'
+# def partial_resource(id):
+#     partial_emp = {
+#         'id':id,
+#         'salary':60000,
+#     }
+#     resp = requests.put(BASE_URL + END_POINT, data=json.dumps(partial_emp))
+#     print(resp.status_code)
+#     print(resp.json())
+
+
+# partial_resource(11)
+
+
+#                          2. Partial update  for Object level Validate with name 
+
+# BASE_URL = 'http://127.0.0.1:8000/'
+# END_POINT = 'api-partial-update/'
+# def partial_resource(id):
+#     partial_emp = {
+#         'id':id,
+#         'first_name':'amir',
+#         'salary':8000,
+#     }
+#     resp = requests.put(BASE_URL + END_POINT, data=json.dumps(partial_emp))
+#     print(resp.status_code)
+#     print(resp.json())
+    
+
+
+# partial_resource(12)
